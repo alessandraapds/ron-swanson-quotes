@@ -6,6 +6,8 @@ const Quotes = () => {
   const url = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
   const { data, error, isLoading } = useFetch(url);
 
+  console.log(data);
+
   return (
     <div>
       {isLoading ? (

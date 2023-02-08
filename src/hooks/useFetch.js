@@ -14,12 +14,12 @@ const useFetch = (url) => {
         .then(() => setIsLoading(false));
     };
 
-    setTimeout(() => {
+    const interval = setInterval(() => {
       fetchData();
     }, 30000);
-  });
 
-  return { data, error, isLoading };
+    return data, error, isLoading, clearInterval(interval);
+  }, []);
 };
 
 export default useFetch;
